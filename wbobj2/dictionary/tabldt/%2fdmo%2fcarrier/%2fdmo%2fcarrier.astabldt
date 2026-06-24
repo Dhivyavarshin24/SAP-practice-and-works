@@ -1,0 +1,18 @@
+@EndUserText.label : 'Flight Reference Scenario: Carrier'
+@AbapCatalog.enhancement.category : #NOT_EXTENSIBLE
+@AbapCatalog.tableCategory : #TRANSPARENT
+@AbapCatalog.deliveryClass : #A
+@AbapCatalog.dataMaintenance : #RESTRICTED
+define table /dmo/carrier {
+
+  key client            : abap.clnt not null;
+  key carrier_id        : /dmo/carrier_id not null;
+  name                  : /dmo/carrier_name;
+  currency_code         : /dmo/currency_code;
+  local_created_by      : abp_creation_user;
+  local_created_at      : abp_creation_tstmpl;
+  local_last_changed_by : abp_locinst_lastchange_user;
+  local_last_changed_at : abp_locinst_lastchange_tstmpl;
+  last_changed_at       : abp_lastchange_tstmpl;
+
+}

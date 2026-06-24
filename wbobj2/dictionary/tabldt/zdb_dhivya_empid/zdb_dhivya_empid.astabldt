@@ -1,0 +1,14 @@
+@EndUserText.label : 'employee id'
+@AbapCatalog.enhancement.category : #NOT_EXTENSIBLE
+@AbapCatalog.tableCategory : #TRANSPARENT
+@AbapCatalog.deliveryClass : #A
+@AbapCatalog.dataMaintenance : #RESTRICTED
+define table zdb_dhivya_empid {
+
+  key client   : abap.clnt not null;
+  key employee : zde_dhivya_emp not null;
+  name         : zde_dhivya_empname1;
+  department   : zde_dhivya_dep;
+  include zsdhivya_estr;
+
+}

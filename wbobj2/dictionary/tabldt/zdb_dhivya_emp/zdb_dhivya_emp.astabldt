@@ -1,0 +1,14 @@
+@EndUserText.label : 'Employee Master Table'
+@AbapCatalog.enhancement.category : #NOT_EXTENSIBLE
+@AbapCatalog.tableCategory : #TRANSPARENT
+@AbapCatalog.deliveryClass : #A
+@AbapCatalog.dataMaintenance : #RESTRICTED
+define table zdb_dhivya_emp {
+
+  key client      : abap.clnt not null;
+  key employee_id : abap.numc(10) not null;
+  first_name      : abap.char(40);
+  last_name       : abap.char(40);
+  birth_date      : abap.dats;
+
+}

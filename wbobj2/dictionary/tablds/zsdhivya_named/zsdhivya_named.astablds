@@ -1,0 +1,9 @@
+@EndUserText.label : 'Named Includes'
+@AbapCatalog.enhancement.category : #NOT_EXTENSIBLE
+define structure zsdhivya_named {
+
+  first_name : /dmo/first_name;
+  last_name  : /dmo/last_name;
+  address    : include zsdhivya_address;
+
+}

@@ -1,0 +1,16 @@
+@EndUserText.label : 'ITEM TABLE'
+@AbapCatalog.enhancement.category : #NOT_EXTENSIBLE
+@AbapCatalog.tableCategory : #TRANSPARENT
+@AbapCatalog.deliveryClass : #A
+@AbapCatalog.dataMaintenance : #RESTRICTED
+define table zflt1_maint_log {
+
+  key client      : abap.clnt not null;
+  key loguuid     : sysuuid_x16 not null;
+  key vechileuuid : zc_vehicle_uuid not null;
+  maintdate       : zc_maintain_date;
+  mainttype       : zc_maint_type;
+  cost            : zc_cost;
+  status          : zc_status;
+
+}

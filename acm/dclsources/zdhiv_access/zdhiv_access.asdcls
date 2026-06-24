@@ -1,0 +1,11 @@
+@EndUserText.label: 'access control unit 7 book 3'
+@MappingRole: true
+define role ZDHIV_ACCESS {
+     grant 
+          select
+               on
+                    ZI_CARRIER_DHIVYA
+                         where
+//                              (Carrid) = aspect pfcg_auth( ZDHI_AUOBJ, ZDHIV_AU, ACTVT = '03');
+                                 Carrid = 'AA' ;
+}

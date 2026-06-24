@@ -1,0 +1,23 @@
+@EndUserText.label : 'DET'
+@AbapCatalog.enhancement.category : #NOT_EXTENSIBLE
+@AbapCatalog.tableCategory : #TRANSPARENT
+@AbapCatalog.deliveryClass : #A
+@AbapCatalog.dataMaintenance : #RESTRICTED
+define table ztstudent_det {
+
+  key client            : abap.clnt not null;
+  @AbapCatalog.foreignKey.screenCheck : true
+  key rollno            : zde_dhivya_rollno not null
+    with foreign key ztdhivya_student
+      where rollno = ztstudent_det.rollno;
+  key student_standard  : zde_standard not null;
+  name                  : zde_dhivya_name;
+  mark                  : zde_marks;
+  local_created_by      : abp_creation_user;
+  local_created_at      : abp_creation_tstmpl;
+  local_last_changed_by : abp_locinst_lastchange_user;
+  local_last_changed_at : abp_locinst_lastchange_tstmpl;
+  last_changed_by       : abp_lastchange_user;
+  last_changed_at       : abp_lastchange_tstmpl;
+
+}

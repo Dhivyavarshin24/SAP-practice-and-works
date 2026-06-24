@@ -1,0 +1,19 @@
+@EndUserText.label : 'Student Details'
+@AbapCatalog.enhancement.category : #NOT_EXTENSIBLE
+@AbapCatalog.tableCategory : #TRANSPARENT
+@AbapCatalog.deliveryClass : #A
+@AbapCatalog.dataMaintenance : #RESTRICTED
+define table ztdhivya_student {
+
+  key client            : abap.clnt not null;
+  key rollno            : zde_dhivya_rollno not null;
+  name                  : zde_dhivya_name;
+  phone                 : zde_dhivya_phone;
+  local_created_by      : abp_creation_user;
+  local_created_at      : abp_creation_tstmpl;
+  local_last_changed_by : abp_locinst_lastchange_user;
+  local_last_changed_at : abp_locinst_lastchange_tstmpl;
+  last_changed_by       : abp_lastchange_user;
+  last_changed_at       : abp_lastchange_tstmpl;
+
+}

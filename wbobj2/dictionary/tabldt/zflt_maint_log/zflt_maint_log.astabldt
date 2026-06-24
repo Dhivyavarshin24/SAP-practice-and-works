@@ -1,0 +1,22 @@
+@EndUserText.label : 'Maintenance Log'
+@AbapCatalog.enhancement.category : #NOT_EXTENSIBLE
+@AbapCatalog.tableCategory : #TRANSPARENT
+@AbapCatalog.deliveryClass : #A
+@AbapCatalog.dataMaintenance : #RESTRICTED
+define table zflt_maint_log {
+
+  key client            : abap.clnt not null;
+  key log_uuid          : sysuuid_x16 not null;
+  vehicle_uuid          : sysuuid_x16;
+  maint_date            : abap.dats;
+  maint_type            : abap.char(30);
+  @Semantics.amount.currencyCode : 'currency.'
+  cost                  : abap.curr(15,2);
+  currency              : abap.cuky;
+  created_by            : abp_creation_user;
+  created_at            : abp_creation_tstmpl;
+  last_changed_by       : abp_lastchange_user;
+  last_changed_at       : abp_lastchange_tstmpl;
+  local_last_changed_at : abp_locinst_lastchange_tstmpl;
+
+}

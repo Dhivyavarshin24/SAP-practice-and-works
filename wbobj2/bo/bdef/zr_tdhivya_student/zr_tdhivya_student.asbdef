@@ -1,0 +1,51 @@
+managed implementation in class ZBP_R_TDHIVYA_STUDENT unique;
+strict ( 2 );
+with draft;
+extensible;
+define behavior for ZR_TDHIVYA_STUDENT alias ZrTdhivyaStudent
+persistent table ZTDHIVYA_STUDENT
+extensible
+draft table ZTDHVYA_STDENT_D
+etag master LocalLastChangedAt
+lock master total etag LastChangedAt
+authorization master( global )
+{
+  field ( mandatory : create )
+   Rollno;
+
+  field ( readonly )
+   LocalCreatedBy,
+   LocalCreatedAt,
+   LocalLastChangedBy,
+   LocalLastChangedAt,
+   LastChangedBy,
+   LastChangedAt;
+
+  field ( readonly : update )
+   Rollno;
+
+
+  create;
+  update;
+  delete;
+
+  draft action Activate optimized;
+  draft action Discard;
+  draft action Edit;
+  draft action Resume;
+  draft determine action Prepare;
+
+  mapping for ZTDHIVYA_STUDENT corresponding extensible
+  {
+    Rollno = ROLLNO;
+    Name = NAME;
+    Phone = PHONE;
+    LocalCreatedBy = LOCAL_CREATED_BY;
+    LocalCreatedAt = LOCAL_CREATED_AT;
+    LocalLastChangedBy = LOCAL_LAST_CHANGED_BY;
+    LocalLastChangedAt = LOCAL_LAST_CHANGED_AT;
+    LastChangedBy = LAST_CHANGED_BY;
+    LastChangedAt = LAST_CHANGED_AT;
+  }
+
+}

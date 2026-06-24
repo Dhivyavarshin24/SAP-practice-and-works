@@ -1,0 +1,21 @@
+@EndUserText.label : 'Student Table 1'
+@AbapCatalog.enhancement.category : #NOT_EXTENSIBLE
+@AbapCatalog.tableCategory : #TRANSPARENT
+@AbapCatalog.deliveryClass : #A
+@AbapCatalog.dataMaintenance : #RESTRICTED
+define table zdb_dhiv_stutab {
+
+  key mandt             : abap.clnt not null;
+  key student_rollno    : zstu_name not null;
+  studentname           : zde_dhivya_name;
+  fathername            : zde_dhivya_father;
+  mothername            : zde_dhivya_mother;
+  phonename             : zde_dhivya_phone1;
+  schoolname            : zde_dhivya_schname;
+  created_by            : abp_creation_user;
+  created_at            : abp_creation_tstmpl;
+  last_changed_by       : abp_lastchange_user;
+  last_changed_at       : abp_lastchange_tstmpl;
+  local_last_changed_at : abp_locinst_lastchange_tstmpl;
+
+}

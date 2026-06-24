@@ -1,0 +1,22 @@
+@EndUserText.label : 'Vehicle Header'
+@AbapCatalog.enhancement.category : #NOT_EXTENSIBLE
+@AbapCatalog.tableCategory : #TRANSPARENT
+@AbapCatalog.deliveryClass : #A
+@AbapCatalog.dataMaintenance : #RESTRICTED
+define table zflt_dhi_vehicle {
+
+  key client            : abap.clnt not null;
+  key vehicle_uuid      : zde_dhivya_vehuuid not null;
+  vin                   : zde_dhivya_vin;
+  model_name            : zde_dhivya_model;
+  last_service_date     : zde_dhivya_lsdate;
+  @Semantics.amount.currencyCode : 'zflt_dhi_vehicle.currency'
+  total_cost            : zde_dhivya_cost;
+  currency              : abap.cuky;
+  created_by            : abp_creation_user;
+  created_at            : abp_creation_tstmpl;
+  last_changed_by       : abp_lastchange_user;
+  last_changed_at       : abp_lastchange_tstmpl;
+  local_last_changed_at : abp_locinst_lastchange_tstmpl;
+
+}

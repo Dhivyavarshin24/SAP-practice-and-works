@@ -1,0 +1,18 @@
+@EndUserText.label : 'Students Details'
+@AbapCatalog.enhancement.category : #NOT_EXTENSIBLE
+@AbapCatalog.tableCategory : #TRANSPARENT
+@AbapCatalog.deliveryClass : #A
+@AbapCatalog.dataMaintenance : #RESTRICTED
+define table ztstudent_detail {
+
+  key client      : abap.clnt not null;
+  key rollno      : zde_dhivya_rollno not null;
+  name            : zde_dhivya_name;
+  standard        : zde_standard;
+  mark            : zde_marks;
+  created_by      : abp_creation_user;
+  created_at      : abp_creation_tstmpl;
+  last_changed_by : abp_lastchange_user;
+  last_changed_at : abp_lastchange_tstmpl;
+
+}

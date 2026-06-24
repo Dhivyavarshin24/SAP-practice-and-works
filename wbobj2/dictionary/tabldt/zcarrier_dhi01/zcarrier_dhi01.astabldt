@@ -1,0 +1,13 @@
+@EndUserText.label : 'carrier table'
+@AbapCatalog.enhancement.category : #EXTENSIBLE_ANY
+@AbapCatalog.tableCategory : #TRANSPARENT
+@AbapCatalog.deliveryClass : #A
+@AbapCatalog.dataMaintenance : #RESTRICTED
+define table zcarrier_dhi01 {
+
+  key client : abap.clnt not null;
+  key carrid : /dmo/carrier_id not null;
+  name       : /dmo/carrier_name;
+  currcode   : /dmo/currency_code;
+
+}

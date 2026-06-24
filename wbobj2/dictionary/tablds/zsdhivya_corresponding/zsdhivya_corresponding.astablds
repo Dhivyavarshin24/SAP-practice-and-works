@@ -1,0 +1,9 @@
+@EndUserText.label : 'corresponding type in abap'
+@AbapCatalog.enhancement.category : #NOT_EXTENSIBLE
+define structure zsdhivya_corresponding {
+
+  first_name : /dmo/first_name;
+  last_name  : /dmo/last_name;
+  address    : zsdhivya_address;
+
+}

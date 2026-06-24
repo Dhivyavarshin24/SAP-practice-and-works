@@ -1,0 +1,14 @@
+@EndUserText.label : 'student marks in cds view'
+@AbapCatalog.enhancement.category : #NOT_EXTENSIBLE
+@AbapCatalog.tableCategory : #TRANSPARENT
+@AbapCatalog.deliveryClass : #A
+@AbapCatalog.dataMaintenance : #RESTRICTED
+define table zdtstudent_mark {
+
+  key client : abap.clnt not null;
+  key rollno : abap.char(10) not null;
+  name       : abap.char(40);
+  marks      : abap.int4;
+  grade      : abap.char(1);
+
+}

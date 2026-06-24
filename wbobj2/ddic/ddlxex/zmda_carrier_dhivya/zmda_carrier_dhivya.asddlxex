@@ -1,0 +1,22 @@
+@Metadata.layer: #CORE
+annotate entity ZI_CARRIER_DHIVYA01
+     with 
+{
+     @UI.facet: [ { id: 'idCarrier',
+               type: #IDENTIFICATION_REFERENCE,
+               label: 'Carrier Information',
+               position: 10 } ]
+
+  @UI: { lineItem:       [ { position: 10 } ],
+         identification: [ { position: 10, label: 'Carrier ID' } ] }
+  Carrid;
+
+  @UI: { lineItem:       [ { position: 20 } ],
+         identification: [ { position: 20, label: 'Airline Name' } ] }
+  Name;
+
+  @UI: { lineItem:       [ { position: 30 } ],
+         identification: [ { position: 30, label: 'Currency' } ] }
+  Currcode;
+     
+}

@@ -1,0 +1,16 @@
+@EndUserText.label : 'Gadget Inventory Application'
+@AbapCatalog.enhancement.category : #NOT_EXTENSIBLE
+@AbapCatalog.tableCategory : #TRANSPARENT
+@AbapCatalog.deliveryClass : #A
+@AbapCatalog.dataMaintenance : #RESTRICTED
+define table ztgadget_dhivya {
+
+  key client      : abap.clnt not null;
+  key gadget_uuid : sysuuid_x16 not null;
+  gadget_name     : abap.char(50);
+  brand           : abap.char(30);
+  price           : abap.dec(15,2);
+  currency_code   : abap.cuky;
+  last_changed_at : timestampl;
+
+}

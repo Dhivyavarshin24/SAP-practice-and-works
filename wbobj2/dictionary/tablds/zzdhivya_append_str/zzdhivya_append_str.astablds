@@ -1,0 +1,8 @@
+@EndUserText.label : 'Append Structure'
+@AbapCatalog.enhancement.category : #NOT_EXTENSIBLE
+extend type zcarrier_dhi01 with zzdhivya_append_str {
+
+  zz_sustain_rating : abap.char(1);
+  zz_last_audit_at  : abap.utclong;
+
+}

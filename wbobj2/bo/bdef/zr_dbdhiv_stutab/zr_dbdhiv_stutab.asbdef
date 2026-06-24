@@ -1,0 +1,52 @@
+managed implementation in class ZBP_R_DBDHIV_STUTAB unique;
+strict ( 2 );
+with draft;
+extensible;
+define behavior for ZR_DBDHIV_STUTAB alias ZrDbdhivStutab
+persistent table ZDB_DHIV_STUTAB
+extensible
+draft table ZDBDHIV_STUTAB_D
+etag master LocalLastChangedAt
+lock master total etag LastChangedAt
+authorization master( global )
+{
+  field ( mandatory : create )
+   StudentRollno;
+
+  field ( readonly )
+   CreatedBy,
+   CreatedAt,
+   LastChangedBy,
+   LastChangedAt,
+   LocalLastChangedAt;
+
+  field ( readonly : update )
+   StudentRollno;
+
+
+  create;
+  update;
+  delete;
+
+  draft action Activate optimized;
+  draft action Discard;
+  draft action Edit;
+  draft action Resume;
+  draft determine action Prepare;
+
+  mapping for ZDB_DHIV_STUTAB corresponding extensible
+  {
+    StudentRollno = STUDENT_ROLLNO;
+    Studentname = STUDENTNAME;
+    Fathername = FATHERNAME;
+    Mothername = MOTHERNAME;
+    Phonename = PHONENAME;
+    Schoolname = SCHOOLNAME;
+    CreatedBy = CREATED_BY;
+    CreatedAt = CREATED_AT;
+    LastChangedBy = LAST_CHANGED_BY;
+    LastChangedAt = LAST_CHANGED_AT;
+    LocalLastChangedAt = LOCAL_LAST_CHANGED_AT;
+  }
+
+}

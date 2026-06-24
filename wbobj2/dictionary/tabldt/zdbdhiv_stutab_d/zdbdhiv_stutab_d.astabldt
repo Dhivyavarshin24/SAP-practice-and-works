@@ -1,0 +1,22 @@
+@EndUserText.label : 'Draft Database Table for ZDBDHIV_STUTAB_D'
+@AbapCatalog.enhancement.category : #EXTENSIBLE_ANY
+@AbapCatalog.tableCategory : #TRANSPARENT
+@AbapCatalog.deliveryClass : #A
+@AbapCatalog.dataMaintenance : #RESTRICTED
+define table zdbdhiv_stutab_d {
+
+  key mandt          : mandt not null;
+  key studentrollno  : zstu_name not null;
+  studentname        : zde_dhivya_name;
+  fathername         : zde_dhivya_father;
+  mothername         : zde_dhivya_mother;
+  phonename          : zde_dhivya_phone1;
+  schoolname         : zde_dhivya_schname;
+  createdby          : abp_creation_user;
+  createdat          : abp_creation_tstmpl;
+  lastchangedby      : abp_lastchange_user;
+  lastchangedat      : abp_lastchange_tstmpl;
+  locallastchangedat : abp_locinst_lastchange_tstmpl;
+  "%admin"           : include sych_bdl_draft_admin_inc;
+
+}

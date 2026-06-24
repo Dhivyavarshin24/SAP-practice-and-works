@@ -1,0 +1,14 @@
+@EndUserText.label : 'connection table'
+@AbapCatalog.enhancement.category : #NOT_EXTENSIBLE
+@AbapCatalog.tableCategory : #TRANSPARENT
+@AbapCatalog.deliveryClass : #A
+@AbapCatalog.dataMaintenance : #RESTRICTED
+define table zconn_dhivya {
+
+  key client : abap.clnt not null;
+  key carrid : /dmo/carrier_id not null;
+  key connid : /dmo/connection_id not null;
+  cityfrom   : /dmo/city;
+  cityto     : /dmo/city;
+
+}

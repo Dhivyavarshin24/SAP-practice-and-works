@@ -1,0 +1,23 @@
+@EndUserText.label : 'Student Table 2'
+@AbapCatalog.enhancement.category : #NOT_EXTENSIBLE
+@AbapCatalog.tableCategory : #TRANSPARENT
+@AbapCatalog.deliveryClass : #A
+@AbapCatalog.dataMaintenance : #RESTRICTED
+define table zdb_dhiv_stutab2 {
+
+  key client            : abap.clnt not null;
+  @AbapCatalog.foreignKey.screenCheck : true
+  key roll              : zstu_name not null
+    with foreign key zdb_dhiv_stutab
+      where mandt = zdb_dhiv_stutab2.client
+        and student_rollno = zdb_dhiv_stutab2.roll;
+  key standard          : zde_dhivya_stand not null;
+  marks                 : zde_dhivya_smark;
+  sname                 : zde_dhivya_name1;
+  local_created_by      : abp_creation_user;
+  local_created_at      : abp_creation_tstmpl;
+  local_last_changed_by : abp_locinst_lastchange_user;
+  local_last_changed_at : abp_locinst_lastchange_tstmpl;
+  last_changed_at       : abp_lastchange_tstmpl;
+
+}

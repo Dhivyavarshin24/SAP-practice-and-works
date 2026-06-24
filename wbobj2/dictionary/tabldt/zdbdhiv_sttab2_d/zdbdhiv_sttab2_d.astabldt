@@ -1,0 +1,20 @@
+@EndUserText.label : 'Draft Database Table for ZDBDHIV_STTAB2_D'
+@AbapCatalog.enhancement.category : #EXTENSIBLE_ANY
+@AbapCatalog.tableCategory : #TRANSPARENT
+@AbapCatalog.deliveryClass : #A
+@AbapCatalog.dataMaintenance : #RESTRICTED
+define table zdbdhiv_sttab2_d {
+
+  key mandt          : mandt not null;
+  key roll           : zstu_name not null;
+  key standard       : zde_dhivya_stand not null;
+  marks              : zde_dhivya_smark;
+  sname              : zde_dhivya_name1;
+  localcreatedby     : abp_creation_user;
+  localcreatedat     : abp_creation_tstmpl;
+  locallastchangedby : abp_locinst_lastchange_user;
+  locallastchangedat : abp_locinst_lastchange_tstmpl;
+  lastchangedat      : abp_lastchange_tstmpl;
+  "%admin"           : include sych_bdl_draft_admin_inc;
+
+}

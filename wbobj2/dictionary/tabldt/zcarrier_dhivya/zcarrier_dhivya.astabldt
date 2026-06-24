@@ -1,0 +1,13 @@
+@EndUserText.label : 'carrier table'
+@AbapCatalog.enhancement.category : #NOT_EXTENSIBLE
+@AbapCatalog.tableCategory : #TRANSPARENT
+@AbapCatalog.deliveryClass : #A
+@AbapCatalog.dataMaintenance : #RESTRICTED
+define table zcarrier_dhivya {
+
+  key client : abap.clnt not null;
+  key carrid : /dmo/carrier_id not null;
+  name       : /dmo/carrier_name;
+  currcode   : /dmo/currency_code;
+
+}

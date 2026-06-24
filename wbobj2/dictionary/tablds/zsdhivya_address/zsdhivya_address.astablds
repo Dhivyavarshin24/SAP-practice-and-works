@@ -1,0 +1,11 @@
+@EndUserText.label : 'dictionary address'
+@AbapCatalog.enhancement.category : #NOT_EXTENSIBLE
+define structure zsdhivya_address {
+
+  street       : /dmo/street;
+  postal_code  : /dmo/postal_code;
+  city         : /dmo/city;
+  country_code : land1;
+  status       : abap.char(1);
+
+}

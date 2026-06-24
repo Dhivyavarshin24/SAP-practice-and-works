@@ -1,0 +1,9 @@
+@EndUserText.label : 'Include Structures'
+@AbapCatalog.enhancement.category : #NOT_EXTENSIBLE
+define structure zsdhivya_inlude {
+
+  first_name : /dmo/first_name;
+  last_name  : /dmo/last_name;
+  address    : zsdhivya_address;
+
+}

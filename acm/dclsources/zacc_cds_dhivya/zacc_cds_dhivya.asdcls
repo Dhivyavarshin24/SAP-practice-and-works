@@ -1,0 +1,14 @@
+@EndUserText.label: 'cds access control'
+@MappingRole: true
+define role ZACC_CDS_DHIVYA {
+    grant 
+        select
+            on
+                zcds_dhivya_airport
+                    where
+                        ( country ) = aspect pfcg_auth(
+                                                     /DMO/TRVL,
+                                                     /DMO/CNTRY,
+                                                     actvt = '03');
+                        
+}

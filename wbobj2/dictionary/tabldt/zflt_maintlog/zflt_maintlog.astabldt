@@ -1,0 +1,18 @@
+@EndUserText.label : 'Maintenance Log'
+@AbapCatalog.enhancement.category : #NOT_EXTENSIBLE
+@AbapCatalog.tableCategory : #TRANSPARENT
+@AbapCatalog.deliveryClass : #A
+@AbapCatalog.dataMaintenance : #RESTRICTED
+define table zflt_maintlog {
+
+  key client   : abap.clnt not null;
+  key log_uuid : zde_dhivya_logid not null;
+  vehicle_uuid : zde_dhivya_vehicle_uuid;
+  maint_date   : zde_dhivya_mdate;
+  maint_type   : zde_dhivya_mainttype;
+  currency     : abap.cuky;
+  @Semantics.amount.currencyCode : 'currency.'
+  cost         : zde_dhivya_cost;
+  status       : zde_dhivya_status;
+
+}

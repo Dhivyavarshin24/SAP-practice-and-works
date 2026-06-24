@@ -1,0 +1,11 @@
+@EndUserText.label : 'sturcture'
+@AbapCatalog.enhancement.category : #NOT_EXTENSIBLE
+define structure zsdhivya_estr {
+
+  created_by            : abp_creation_user;
+  created_at            : abp_creation_tstmpl;
+  local_last_changed_by : abp_locinst_lastchange_user;
+  local_last_changed_at : abp_locinst_lastchange_tstmpl;
+  last_changed_at       : abp_lastchange_tstmpl;
+
+}
